@@ -1,5 +1,11 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 class Simple {
     public static void main(String[] args) {
-        System.out.println("Arkadiy Blokhin 19.03.2026");
+        LocalDate today = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+
+        System.out.println("Arkadiy Blokhin " + today.format(formatter));
     }
 }
